@@ -1,34 +1,22 @@
-name: Deploy Docusaurus
-
-on:
-  push:
-    branches:
-      - main # Thực hiện hành động khi có push lên nhánh "main"
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Bước 1: Checkout code từ repository
       - name: Checkout code
         uses: actions/checkout@v2
 
-      # Bước 2: Cài đặt Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 16 # Dùng phiên bản Node.js phù hợp
+          node-version: 18 # Đảm bảo sử dụng phiên bản >=18
 
-      # Bước 3: Cài đặt các dependencies
       - name: Install dependencies
         run: npm ci
 
-      # Bước 4: Build website
       - name: Build website
         run: npm run build
 
-      # Bước 5: Deploy lên GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:
