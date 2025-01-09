@@ -1,15 +1,18 @@
+// Import các plugin markdown-it
+const markdownItHighlight = require('markdown-it-highlightjs');
+const markdownItWikiLinks = require('markdown-it-wikilinks');
+
+// Cấu hình Docusaurus
 const config = {
-  title: 'My Site',
+  title: 'Nguyenhaiha',
   tagline: 'Dinosaurs are cool',
   favicon: 'img/favicon.ico',
 
-  // GitHub Pages configuration
-  url: 'https://nguyenhaiha269.github.io', // URL GitHub Pages cá nhân
-  baseUrl: '/my-website/', // Base URL theo tên repository
+  url: 'https://nguyenhaiha269.github.io',
+  baseUrl: '/my-website/',
 
-  // GitHub repository configuration
-  organizationName: 'nguyenhaiha269', // GitHub username
-  projectName: 'my-website', // Tên repository
+  organizationName: 'nguyenhaiha269',
+  projectName: 'my-website',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -103,10 +106,18 @@ const config = {
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: require('prism-react-renderer/themes/github'),
+      darkTheme: require('prism-react-renderer/themes/dracula'),
+    },
+  },
+
+  markdown: {
+    // Tích hợp các plugin markdown-it
+    options: {
+      highlight: true,
+      plugins: [markdownItHighlight, markdownItWikiLinks],
     },
   },
 };
 
-export default config;
+module.exports = config;
