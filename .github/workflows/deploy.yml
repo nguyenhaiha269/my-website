@@ -1,3 +1,10 @@
+name: Deploy Docusaurus
+
+on:
+  push:
+    branches:
+      - main # Kích hoạt khi có push lên nhánh "main"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -9,7 +16,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18 # Đảm bảo sử dụng phiên bản >=18
+          node-version: 18 # Dùng phiên bản Node.js phù hợp
 
       - name: Install dependencies
         run: npm ci
