@@ -1,0 +1,1 @@
+ ==Khi chúng ta chọn một mục tiêu và đặt toàn bộ con người mình vào đó bằng sự tập trung hết mức, thì dù có làm gì chúng ta cũng sẽ thấy vui.== 

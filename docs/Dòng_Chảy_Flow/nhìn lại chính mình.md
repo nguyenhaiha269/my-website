@@ -1,0 +1,1 @@
+“Trong sợ hãi bạn nhìn lại chính mình, vào những gì bạn đã làm, nó khiến bạn phải sững sờ”

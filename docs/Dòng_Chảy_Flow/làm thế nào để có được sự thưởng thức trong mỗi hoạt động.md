@@ -1,0 +1,1 @@
+ <span style="background:rgba(240, 167, 216, 0.55)">Trừ khi một người học cách đặt mục tiêu</span>, <span style="background:rgba(205, 244, 105, 0.55)">nhận ra và đánh giá sự phản hồi trong các hoạt động đó</span>, <span style="background:rgba(173, 239, 239, 0.55)">bằng không họ sẽ không thưởng thức được hoạt động.</span> 
